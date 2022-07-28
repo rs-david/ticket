@@ -1,0 +1,164 @@
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 80mm;
+  /* width: 100%; */
+}
+
+.order-ticket {
+  font-family: "Ticketing Self", 'Times New Roman', Times, serif;
+  width: 100%; /* 80mm */
+  border: 1px dashed black;
+  display: flex;
+  justify-content: center;
+}
+
+.order-ticket > .printing-area {
+  text-align: center;
+  width: 82.5%; /* 82.5% | 66mm */
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  /* border: 1px dashed gold; */
+}
+
+.order-ticket > .printing-area > .header-message {
+  text-transform: uppercase;
+  font-size: small;
+}
+
+.order-ticket > .printing-area > .logo {
+  width: 100%;
+  margin: 0;
+}
+
+.order-ticket > .printing-area > .logo > img {
+  width: 100%;
+  margin: 0;
+}
+
+/* ------------------------- ORDER INFO */
+
+.order-ticket > .printing-area > .order-info {
+  font-size: small;
+}
+
+.order-ticket > .printing-area > .order-info > table {
+  width: 100%;
+}
+
+.order-ticket > .printing-area > .order-info > table > tbody > tr > td:first-child {
+  text-align: right;
+  width: 50%;
+  padding-right: 5px;
+}
+
+.order-ticket > .printing-area > .order-info > table > tbody > tr > td:nth-child(2) {
+  text-align: left;
+  width: 50%;
+}
+
+.order-ticket > .printing-area > .order-info > table > tbody > tr > td > span.cashier-name,
+.order-ticket > .printing-area > .order-info > table > tbody > tr > td > span.customer-name {
+  text-transform: uppercase;
+  display: block;
+  max-width: 135px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* ------------------------- ORDER PRODUCTS */
+
+.order-ticket > .printing-area > .order-products {
+  font-size: small;
+}
+
+.order-ticket > .printing-area > .order-products > table {
+  width: 100%;
+  text-align: left;
+}
+
+.order-ticket > .printing-area > .order-products > table > thead > tr > th {
+  padding-bottom: 5px;
+  font-weight: normal;
+}
+
+.order-ticket > .printing-area > .order-products > table > thead > tr > th.product-description {
+  width: 42.5%;
+}
+
+.order-ticket > .printing-area > .order-products > table > thead > tr > th.product-quantity {
+  width: 12.5%;
+}
+
+.order-ticket > .printing-area > .order-products > table > thead > tr > th.product-price {
+  width: 22.5%;
+}
+
+.order-ticket > .printing-area > .order-products > table > thead > tr > th.product-amount {
+  width: 22.5%;
+}
+
+.order-ticket > .printing-area > .order-products > table > tbody > tr > td {
+  padding-bottom: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+.order-ticket > .printing-area > .order-products > table > tbody > tr > td > p > span.product-color {
+  text-transform: uppercase;
+  display: inline-block;
+  max-width: 55px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  vertical-align: top;
+}
+
+/* ------------------------- ORDER AMOUNTS */
+
+.order-ticket > .printing-area > .order-amounts > table {
+  font-size: small;
+  width: 100%;
+}
+
+.order-ticket > .printing-area > .order-amounts > table tr td:first-child {
+  text-align: right;
+  width: 77.5%;
+  padding-right: 5px;
+}
+
+.order-ticket > .printing-area > .order-amounts > table tbody tr td:nth-child(2) {
+  text-align: left;
+}
+
+.order-ticket > .printing-area > .order-amounts > table tbody tr td.items-sold {
+  text-align: center;
+  padding-top: 10px;
+}
+
+/* ------------------------- PRINT BUTTON */
+
+#print-button {
+  padding: 10px 20px;
+  margin-top: 10px;
+}
+
+/* ------------------------- MEDIAS */
+
+@media print {
+  #print-button {
+    display: none;
+  }
+  .order-ticket {
+    border: none;
+  }
+}
+
+@font-face {
+  font-family: "Ticketing Self";
+  src: url(fonts/Ticketing.ttf);
+}

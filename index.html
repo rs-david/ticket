@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Ticket</title>
+  <link rel="stylesheet" href="custom.css">
+  <link rel="stylesheet" href="ticket.css">
+  <!-- Scripts -->
+  <script type="module" src="ticket.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="order-ticket">
+      <div class="printing-area">
+        <span class="header-message">Distribuidor Autorizado Tequixquiac</span>
+        <figure class="logo">
+          <img src="logo.png" alt="">
+        </figure>
+        <div class="order-info">
+          <table>
+            <tbody>
+              <tr>
+                <td>Cajero:</td>
+                <td>
+                  <span class="cashier-name">Héctor López</span>
+                </td>
+              </tr>
+              <tr>
+                <td>Folio:</td>
+                <td class="order-id">65860</td>
+              </tr>
+              <tr>
+                <td>Fecha/Hora:</td>
+                <td class="order-created">11/04/2022 15:59:27</td>
+              </tr>
+              <tr>
+                <td>Socio:</td>
+                <td class="customer-id">000045786</td>
+              </tr>
+              <tr>
+                <td>Nombre:</td>
+                <td>
+                  <span class="customer-name">David Rendón Soto</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <hr>
+        <div class="order-products">
+          <table>
+            <thead>
+              <tr>
+                <th class="product-description">Descripción</th>
+                <th class="product-quantity">Cant</th>
+                <th class="product-price">Precio</th>
+                <th class="product-amount">Importe</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="product-description">
+                  <p>CKLASS 002-23</p>
+                  <p><span class="product-size">25.0</span> / <span class="product-color">Mostaza</span></p>
+                </td>
+                <td class="product-quantity">1</td>
+                <td class="product-price">5250.50</td>
+                <td class="product-amount">1250.50</td>
+              </tr>
+              <tr>
+                <td class="product-description">
+                  <p>CKLASS 001-16</p>
+                  <p><span class="product-size">23.0</span> / <span class="product-color">Esmeralda</span></p>
+                </td>
+                <td class="product-quantity">2</td>
+                <td class="product-price">100.50</td>
+                <td class="product-amount">201.00</td>
+              </tr>
+              <tr>
+                <td class="product-description">
+                  <p>CKLASS 021-16</p>
+                  <p><span class="product-size">MED</span> / <span class="product-color">Blue</span></p>
+                </td>
+                <td class="product-quantity">3</td>
+                <td class="product-price">150.50</td>
+                <td class="product-amount">301.00</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <hr>
+        <div class="order-amounts">
+          <table>
+            <tbody>
+              <tr>
+                <td>Total:</td>
+                <td>4550.50</td>
+              </tr>
+              <tr>
+                <td>Anticipo:</td>
+                <td>-500.00</td>
+              </tr>
+              <tr>
+                <td>N.C.:</td>
+                <td>-0.00</td>
+              </tr>
+              <tr>
+                <td>Vale:</td>
+                <td>-0.00</td>
+              </tr>
+              <tr>
+                <td>Diferencia:</td>
+                <td>4050.50</td>
+              </tr>
+              <tr>
+                <td class="items-sold" colspan="2"># ARTÍCULOS VENDIDOS 3</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <hr>
+      </div>
+    </div>
+    <button id="print-button" type="button">Imprimir</button>
+  </div>
+</body>
+
+</html>

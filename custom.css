@@ -1,0 +1,207 @@
+/*---------- VARIABLES ----------*/
+:root {
+  /*----------------------------- Colors */
+  --primary: #3a86ff;
+  --secondary: #8b8c89;
+  --info: #bebebe;
+  --success: #29bf12;
+  --warning: #ffc107;
+  --danger: #ff0000;
+
+  /*----------------------------- Inputs */
+  --height-custom-input: 1.8rem;
+  --font-size-custom-input: .95rem;
+  --font-size-custom-label: 0.75rem;
+}
+
+/*---------- ELEMENTOS ----------*/
+html {
+  height: 100vh;
+  font-size: 15px;
+}
+
+body,
+input,
+button,
+textarea {
+  font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
+}
+
+body,
+header,
+nav,
+main,
+section,
+footer,
+table,
+tbody,
+thead,
+tfoot,
+tr,
+th,
+td,
+a,
+div,
+form,
+input,
+textarea,
+button,
+figure,
+label,
+label:before,
+span,
+ul,
+li,
+p,
+h1,
+h2,
+img,
+fieldset {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a:hover,
+button:hover {
+  cursor: pointer;
+}
+
+/*---------- ELEMENTOS PERSONALIZADOS ----------*/
+
+/* -------------------------------------------------- CUSTOM INPUTS */
+.form-group {
+  overflow: hidden;
+}
+
+.form-group,
+.form-group > select,
+.form-group > select > option {
+  font-family: "Open Sans", sans-serif;
+}
+
+.form-group > label {
+  color: var(--secondary);
+  font-size: var(--font-size-custom-label);
+  font-weight: 600;
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.form-group > select {
+  appearance: none;
+}
+
+.form-group > input[type="text"],
+.form-group > input[type="number"],
+.form-group > input[type="search"],
+.form-group > input[type="tel"],
+.form-group > input[type="email"],
+.form-group > input[type="date"],
+.form-group > select {
+  font-size: var(--font-size-custom-input);
+  width: 100%;
+  height: var(--height-custom-input);
+  padding: 0 0.5rem;
+  letter-spacing: 0.75px;
+  border: none;
+  border-bottom: 2px solid var(--info);
+}
+
+.form-group > input::placeholder {
+  color: var(--info);
+}
+
+.form-group > input:valid,
+.form-group > select:valid {
+  border-color: var(--success);
+}
+
+.form-group > input:focus,
+.form-group > select:focus {
+  outline: none;
+  border-color: var(--warning);
+}
+
+/* -------------------------------------------------- CUSTOM RADIOS */
+
+.form-group > .radio-group {
+  width: 100%;
+  border: none;
+  display: flex;
+}
+
+.form-group > .radio-group > input[type="radio"] {
+  display: none;
+}
+
+.form-group > .radio-group > label.custom-radio {
+  font-size: var(--font-size-custom-input);
+  color: var(--secondary);
+  text-transform: uppercase;
+  padding: 0 0.5rem;
+  height: var(--height-custom-input);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  border-bottom: 2px solid var(--info);
+  transition: all 0.3s ease;
+}
+
+.form-group > .radio-group > input[type="radio"]:checked:checked + label.custom-radio {
+  color: var(--success);
+  border-color: var(--success);
+}
+
+/* -------------------------------------------------- CUSTOM CHECKBOXES */
+
+.form-group > input[type="checkbox"] {
+  display: none;
+}
+
+.form-group > input[type="checkbox"] + label.custom-checkbox {
+  width: 18px;
+  height: 18px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-group > input[type="checkbox"] + label.custom-checkbox:before {
+  font-family: "Font Awesome 5 Free";
+  content: "";
+  color: white;
+  font-size: 9px;
+  font-weight: bold;
+  line-height: 1;
+  height: 18px;
+  width: 18px;
+  background-color: transparent;
+  border: 1px solid var(--primary);
+  border-radius: 0.25rem;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-group > input[type="checkbox"]:checked + label.custom-checkbox:before {
+  content: "\f00c"; /* Icon: "check" */
+  background-color: var(--primary);
+}
+
+/* -------------------------------------------------- CUSTOM BUTTONS */
+
+button.custom-button {
+  color: white;
+  letter-spacing: 1px;
+  padding: 12.5px 25px;
+  display: inline-block;
+  background-color: var(--primary);
+  border: 1px solid var(--primary);
+}
